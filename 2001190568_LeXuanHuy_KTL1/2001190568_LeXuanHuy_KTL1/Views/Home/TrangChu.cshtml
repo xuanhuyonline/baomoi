@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "TrangChu";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<body>
+    @using (Html.BeginForm())
+    {
+
+        <div class="container">
+            <h2 style="text-align:center; color:blue; font-weight:bold;">NHẬP SẢN PHẨM VÀO SHOP</h2>
+            <label for="id">Tên sản phẩm: </label>
+            <input type="text" id="name" name="txt_name" class="form-control" /><br />
+            <label for="id">Giá: </label>
+            <input type="text" id="pri" name="txt_pri" class="form-control" /><br />
+            <label for="id">Ảnh: </label>
+            <input type="file" id="pic" name="image" class="form-control" /><br />
+            <center><input type="submit" value="NHẬP" class="btn btn-primary" /></center>
+        </div>
+    }
+</body>

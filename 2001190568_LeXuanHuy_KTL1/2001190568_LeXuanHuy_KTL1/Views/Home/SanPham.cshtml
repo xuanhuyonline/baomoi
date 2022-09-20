@@ -1,0 +1,43 @@
+﻿@using _2001190568_LeXuanHuy_KTL1.Models;
+@{
+    ViewBag.Title = "SanPham";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h4>SẢN PHẨM TIÊU BIỂU</h4>
+<div class="row">
+    @for (int i = 0; i < ViewBag.Hoa.Count - 4; i++)
+    {
+        <div class="col">
+            <div class="card h-100 mb-1">
+                <img src="~/Images/@ViewBag.Hoa[i].Anh" class="card-img-top" width="60%" height="170px" />
+                <div class="card-body">
+                    <p class="card-title" style="font-weight:bold;">@ViewBag.Hoa[i].TenSanPham</p>
+                    <p class="card-text" style="text-align:justify;">
+                        Giá: <span style="color:red;">@ViewBag.Hoa[i].Gia.ToString()</span>
+                    </p>
+                    <a href="#" class="btn btn-primary btn-block">Chọn mua</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+<br />
+<div class="row">
+    @for (int i = 4; i < ViewBag.Hoa.Count; i++)
+    {
+        <div class="col">
+            <div class="card h-100 mb-1">
+                <img src="~/Images/@ViewBag.Hoa[i].Anh" class="card-img-top" width="60%" height="170px" />
+                <div class="card-body">
+                    <p class="card-title" style="font-weight:bold;">@ViewBag.Hoa[i].TenSanPham</p>
+                    <p class="card-text" style="text-align:justify;">
+                        Giá: <span style="color:red;">@ViewBag.Hoa[i].Gia.ToString()</span>
+                    </p>
+                    <a href="#" class="btn btn-primary btn-block">Chọn mua</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+<br />

@@ -1,0 +1,39 @@
+﻿@model _2001190568_LeXuanHuy_KTL1.Models.User
+@{
+    ViewBag.Title = "Dangnhap";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="container row justify-content-center">
+    <div class="col-12 mx-auto main">
+        <h4 style="text-align:center;">ĐĂNG NHẬP</h4>
+        <div class="form-group">
+            <label>UserName</label>
+            @Html.TextBoxFor(model => model.Ten, new
+                {
+                    @class = "form-control",
+                    placeHolder = "Enter Your UserName"
+                })
+            @Html.ValidationMessageFor(model => model.Ten, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            @Html.TextBoxFor(model => model.PassWord, new
+                {
+                    @class = "form-control",
+                    type = "Password"
+                })
+            @Html.ValidationMessageFor(model => model.PassWord, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-check form-group">
+            <input type="checkbox" id="check" class="form-check-input" />
+            <label for="check" class="form-check-label">Remember Password</label>
+        </div>
+        <div class="form-group">
+            <center><button type="submit" class="btn bg-primary mx-auto btn-block">ĐĂNG NHẬP</button></center>
+        </div>
+    </div>
+</div>
+
+
+
